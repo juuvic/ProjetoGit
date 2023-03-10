@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio</title>
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{ 
+    overflow:hidden;
+}
+
+.background{
+    background: linear-gradient(rgba(0,0,0,0.5)rgba(0,0,0,0.5));
+    background-image: url("./img/ju.png");
+    background-size: cover;
+    background-position: center;
+    width:100%;
+    height:100vh;
+}
+
+header{
+    display:flex;
+    justify-content: space-around;
+    max-width: 100%;
+    align-items:center;
+    text-align:center;
+    padding-top:1rem;
+}
+.cabeçalho-link{
+    display:flex;
+    gap:3rem;
+    font-weight:300;
+    cursor:pointer;
+}
+
+.cabeçalho-link a{
+    color:darkkhaki;
+    font-size:20px;
+}
+
+.cabeçalho-link a:hover{
+    color:#2ecc71;
+    transition: 0.3s all;
+}
+
+button{
+    color:#2ecc71;
+    background: transparent;
+    border:solid 1px #2ecc71;
+    padding: 5px;
+    border-radius: 15px;
+    font-size: 15px;
+    width:150px;
+    cursor:pointer;
+}
+
+button:hover{
+    background-color: darkkhaki;
+    color: black ;
+    transition: 0.5s;
+}
+
+.container-text{
+    padding: 150px 0 0 130px;
+    border-right:4px solid rgba(0, 0, 0, 0.75);
+}
+
+
+.text h3{
+    color:darkkhaki;
+    font-size:30px;
+    text-shadow: 1px 1px black
+}
+
+.text h1{
+    color: darkkhaki;
+    margin-top: 10px;
+    text-shadow: 1px 1px black;
+}
+
+.text span{
+    color:#2ecc71;
+    font-size: 50px;
+}
+
+.text p{
+    color:#212e27;
+    font-size: 30px;
+    font-weight: 300;
+    margin-top: 30px;
+    text-shadow: 2px 2px #2ecc71;
+}
+
+</style>
+<body>
+    <div class="background">
+      <header>
+        <div class="cabeçalho-link">
+          <ul>
+          <li>
+            <a href="./home.html">Home</a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="./sobre.html">Sobre</a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="./projetos.html">Projetos</a>
+          </li>
+        </ul>
+        <a href="./meucont.html"><button>Meu Contato</button></a>
+        </div>
+      </header>
+          <div class="container-text">
+            <div class="text">
+              <h3>Olá, pessoal!</h3>
+              <h1>Eu sou <span> Júlia Melo! </span></h1>
+              <p>Desenvolvedora Front-end</p>
+                 <div class="redes-sociais">
+                  <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                 </div>   
+            </div>
+          </div>
+    </div>
+</body>
+</html>

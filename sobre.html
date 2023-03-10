@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    overflow:auto;
+}
+
+.background{
+    background-size: cover;
+    background-position: center;
+    width:100%;
+    height:100vh;
+}
+
+header{
+    display:flex;
+    justify-content: space-around;
+    max-width: 100%;
+    align-items:center;
+    text-align:center;
+    padding-top:1rem;
+}
+.cabeçalho-link{
+    display:flex;
+    gap:3rem;
+    font-weight:300;
+    cursor:pointer;
+}
+
+.cabeçalho-link a{
+    color:darkkhaki;
+    font-size:20px;
+}
+
+.cabeçalho-link a:hover{
+    color:#2ecc71;
+    transition: 0.3s all;
+}
+
+button{
+    color:#2ecc71;
+    background: transparent;
+    border:solid 1px #2ecc71;
+    padding: 5px;
+    border-radius: 15px;
+    font-size: 15px;
+    width:150px;
+    cursor:pointer;
+}
+
+button:hover{
+    background-color: darkkhaki;
+    color: black ;
+    transition: 0.5s;
+}
+
+.print-area{
+    width:80%;
+    margin: 20px auto;
+    
+}
+
+.print-area .header{
+    width:300%;
+    height:150px;
+    background-color:gray;
+    display:flex;
+    align-items: center;
+    position: relative;
+
+}
+
+.header img{ 
+    width:200px;
+    height:200px;
+    border-radius:360px;
+    position: absolute;
+    top:150px;
+    left:80px;
+    border:5px solid white;
+    box-shadow: 3px 3px 3px rgba(0,0,0,.5);
+    cursor:pointer;
+    transition: .5s;
+    filter:grayscale(100%);
+}
+
+.header img:hover{
+    filter:grayscale(0%);
+    transform: scale(1.05);
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
+}
+
+.header-text{
+    color:white;
+    width:60%;
+    margin-left: auto;
+}
+
+.header-text h1{
+    font-size:80px;
+    font-weight:normal;
+}
+
+.header-text p{
+    font-size:20px;
+    color:lightgray;
+}
+
+.content{
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.left-area{
+    width:26%;
+    background-color: rgba(238, 238, 238, 0.836);
+    text-align:center;
+    padding-bottom: 20px;
+}
+
+.left-area .contact{
+    margin-top: 150px;
+    padding:0 30px;
+}
+
+.contact h1{
+    font-size: 30px;
+    font-weight:normal;
+    margin:30px 0;
+}
+
+.contact h3{
+    font-size:18px;
+    margin:10px 0;
+}
+
+.contact p{
+    font-size:17px;
+}
+
+.skills{
+    margin-top:30px;
+}
+
+.skills h1{
+    font-size:30px;
+    font-weight:normal;
+}
+
+.bars{
+    margin-top:30px;
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap:20px 10px;
+    padding:0 30px;
+}
+
+.bars .bar p{
+    font-size:15px;
+    font-weight:bold;
+}
+
+.bar span{
+    display:block;
+    width:50%;
+    height:10px;
+    background-color: gray;
+    margin-top: 10px;
+    border-radius: 10px;
+    position:relative;
+}
+
+.bar span::before{
+    position:absolute;
+    content:"";
+    width:80%;
+    height:80%;
+    background-color: black;
+    top:50%;
+    left:2px;
+    transform: translateY(-50%);
+    border-radius: 10px;
+}
+
+.follow h1{
+    margin-top:40px;
+    font-size:30px;
+    font-weight: normal;
+}
+
+.follow h4{
+    font-size:18px;
+    margin: 10px 0;
+}
+
+.follow a{
+    font-size:15px;
+    color: gray;
+    box-shadow: 0px 1px  rgba(0, 0, 0, 0.7);
+}
+
+.right-area{
+    width:70%;
+    padding:50px;
+}
+
+
+.right-area h1{
+    font-size:35px;
+    font-weight:normal;
+}
+
+.right-area h1 span{
+    margin-right: 80px;
+    font-size:60px;
+    color:lightgray;
+}
+
+.right-area p{
+    padding-left:80px;
+    text-align: justify;
+    word-break:break-all;
+    font-size:17px;
+    color:gray;
+    margin-top:10px;
+}
+
+.work-group{
+    position:relative;
+}
+
+.work-group h3{
+    font-size:23px;
+    font-weight:normal;
+    padding-left:80px;
+}
+
+.work-group h4{
+    font-size:16px;
+    padding-left: 80px;
+    font-weight:normal;
+    color:gray;
+}
+
+.work-group span{
+    position:absolute;
+    top:10px;
+    right:0;
+    color:black;
+    font-weight:bold;
+    font-size:10px;
+}
+
+.work-group p{
+    padding-left:80px;
+}
+
+.education{
+    margin-top:30px;
+}
+
+.edu-group{
+    position: relative;
+    margin:20px 0;
+}
+
+.edu-group h4{
+    padding-left:80px;
+    font-size:20px;
+    font-weight:normal;
+}
+
+.edu-group span{
+    position:absolute;
+    top:10px;
+    right:0;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.edu-group p{
+    padding-left:80px;
+}
+
+    </style>
+</head>
+<body>
+  
+<div class="background">
+  
+  <header>
+    <div class="cabeçalho-link">
+      <ul>
+      <li>
+        <a href="./home.html">Home</a>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <a href="./sobre.html">Sobre</a>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <a href="./projetos.html">Projetos</a>
+      </li>
+    </ul>
+    <a href="./meucont.html"><button>Meu Contato</button></a>
+    </div>
+  </header>
+     
+        <body>
+          <div class="print">
+            <div class="header">
+              <img src="./img/eu.png" alt="">
+              <div class="header-text">
+                <h1>Júlia Melo</h1>
+                <p>Desenvolvedora Front-end</p>
+              </div>
+            </div>
+
+            <div class="content">
+              <div class="left-area">
+                <div class="contact">
+                  <h1>CONTATO</h1>
+                  <h3>Telefone</h3>
+                  <p>(11)99548-0026</p>
+                  <h3>G-mail:</h3>
+                  <p>mello.julia48@gmail.com</p>
+                </div>
+                <div class="skills">
+                  <h1>FERRAMENTAS:</h1>
+                  <div class="bars">
+                
+                    <div class="bar">
+                      <p>HTML</p>
+                      <span></span>
+                    </div>
+                    <div class="bar">
+                      <p>CSS</p>
+                      <span></span>
+                    </div>
+                    <div class="bar">
+                      <p>JAVASCRIPT</p>
+                      <span></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="follow">
+                  <h1>Siga-me</h1>
+                  <h4>Instagram</h4>
+                  <p><a href="https://www.instagram.com/j.mello2/">Instagram.com/j.mello2</a></p>
+                  <h4>Linkedin</h4>
+                  <p> <a href="https://www.linkedin.com/in/j%C3%BAlia-melo-504515252/">Linkedin.com/juliamelo</a></p>
+                  <h4>GitHub</h4>
+                  <p> <a href="https://github.com/juuvic">GitHub.com/juuvic</a></p>
+                </div>
+
+              </div>
+              <div class="right-area">
+                <div class="about">
+                  <h1><span><i class="far fa-user"></i>
+                  </span>SOBRE MIM</h1>
+                  <P>Estudante de Tecnologia carismática e com um nível aceitável de proatividade e <br> dinâmica no trabalho. 
+                    Com habilidade em comunicação, procuro melhorar a cada <br>dia o meu pessoal e profissional. Estou à procura de 
+                    uma oportunidade na área de Desenvolvimento, para ampliar o meu aprendizado e também poder ajudar
+                    da<br> melhor maneira possível.<br></P>
+                </div>
+                <div class="work">
+                  <h1><span><i class="fas fa-suitcase-rolling"></i></span>EXPERIÊNCIA PROFISSIONAL</h1>
+                  <div class="work-group">
+                    <h3>APRENDIZ DE USINAGEM</h3>
+                    <h4>TECNOTOOLS FERRAMENTAS E ABRASIVOS</h4>
+                    <span>2021-2022</span>
+                    <p>Estagiei na empresa, fazendo o curso de Aprendizagem Industrial de Mecânica de Usinagem, aplicando conhecimentos como Analista Visual de <br>Ferramentas, utilizando 
+                      equipamentos de Metrologia para medição. Além de atuar na área da Logística, organizando e finalizando o 
+                      produto para venda.    </p>
+                  </div>
+                </div>
+                <div class="education">
+                  <h1><span><i class="fas fa-book"></i></span>EDUCAÇÃO</h1>
+                  <div class="edu-group">
+                    <h4>CURSANDO ANÁLISE E DESENVOLVIMENTO DE SISTEMAS </h4>
+                    <span>2022-2024</span>
+                    <p>Atualmente estou no segundo semestre do curso e me aprimorando em <br>Desenvolvimento Front-end, focando mais
+                      em HTML, CSS e JavaScript e iniciando o aprendizado em Python e Banco de Dados SQL.</p>
+                 
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </body>
+</div>
